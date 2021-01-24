@@ -42,4 +42,24 @@ class SendMessage
     {
         set_value($this, 'reply_markup', json_encode(get_values($replyMarkup)));
     }
+
+    public function setDisableWebPagePreview(bool $disable): void
+    {
+        set_value($this, 'disable_web_page_preview', $disable);
+    }
+
+    public function isDisableWebPagePreview(): bool
+    {
+        return get_value($this, 'disable_web_page_preview', false);
+    }
+
+    public function setDisableNotification(bool $disable): void
+    {
+        set_value($this, 'disable_notification', $disable);
+    }
+
+    public function isDisableNotification(): bool
+    {
+        return get_value($this, 'disable_notification', false);
+    }
 }
