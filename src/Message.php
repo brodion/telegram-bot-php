@@ -41,6 +41,11 @@ class Message
         return get_object($this, 'document', Document::class);
     }
 
+    public function getEntities(): ?Entities
+    {
+        return get_object( $this,'entities', Entities::class);
+    }
+
     /**
      * It can be used only after sending invoice and successful paying for it.
      *
